@@ -14,6 +14,8 @@ PlayAudio = 1;
 %% Mise en place de l'environnement de la simulation
 load homme.mat
 out = sim('L1E2');
+No = 1.875/1000;     %En mW/Hz
+P_Bruit = (No/2)*16000;
 
 
 % A - Histogramme du signal audio et du bruit blanc
@@ -24,6 +26,11 @@ disp('=====================================================')
 figure('Name','Histogramme du signal audio')
 hold on
 hist(out.z, 50);
+hold off
+
+figure('Name','Histogramme du bruit')
+hold on
+hist(out.z_bruit, 50);
 hold off
 
 disp('(i) Que peut-on conclure de la forme des histogrammes pour le signal audio et le bruit ?')
