@@ -1,4 +1,0 @@
-L.E1
-	(i) On fixe la période d'echantillonage a 16kHz car c'est le taux d'echantillonage de mon fichier
-	(ii) On peux dire que c zéro car tout est symétrique (semble symétrique du moins)
-
